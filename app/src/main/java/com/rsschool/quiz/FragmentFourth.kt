@@ -22,7 +22,8 @@ class FragmentFourth() : Fragment() {
     ): View? {
         ( activity as MainActivity).setTheme(R.style.Theme_Quiz_Fourth)
         _binding = FragmentQuiz4Binding.inflate(inflater, container, false)
-        (activity as MainActivity).window.setStatusBarColor(ContextCompat.getColor(activity as MainActivity, R.color.deep_purple_100_dark))
+        (activity as MainActivity).window.statusBarColor =
+            ContextCompat.getColor(activity as MainActivity, R.color.deep_purple_100_dark)
         return binding.root
     }
 

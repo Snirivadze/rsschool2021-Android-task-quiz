@@ -26,7 +26,8 @@ class FragmentFirst() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         (activity as MainActivity).setTheme(R.style.Theme_Quiz_First)
-        (activity as MainActivity).window.setStatusBarColor(ContextCompat.getColor(activity as MainActivity, R.color.deep_orange_100_dark))
+        (activity as MainActivity).window.statusBarColor =
+            ContextCompat.getColor(activity as MainActivity, R.color.deep_orange_100_dark)
         _binding = FragmentQuizBinding.inflate(inflater, container, false)
         return binding.root
     }

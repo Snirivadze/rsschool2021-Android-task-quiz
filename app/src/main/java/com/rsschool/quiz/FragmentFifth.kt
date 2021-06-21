@@ -22,7 +22,8 @@ class FragmentFifth() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         (activity as MainActivity).setTheme(R.style.Theme_Quiz_Fifth)
-        (activity as MainActivity).window.setStatusBarColor(ContextCompat.getColor(activity as MainActivity, R.color.light_green_100_dark))
+        (activity as MainActivity).window.statusBarColor =
+            ContextCompat.getColor(activity as MainActivity, R.color.light_green_100_dark)
         _binding = FragmentQuiz5Binding.inflate(inflater, container, false)
         return binding.root
     }

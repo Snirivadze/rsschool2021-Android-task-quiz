@@ -21,7 +21,8 @@ class FragmentThird() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         (activity as MainActivity).setTheme(R.style.Theme_Quiz_Third)
-        (activity as MainActivity).window.setStatusBarColor(ContextCompat.getColor(activity as MainActivity, R.color.cyan_100_dark))
+        (activity as MainActivity).window.statusBarColor =
+            ContextCompat.getColor(activity as MainActivity, R.color.cyan_100_dark)
         _binding = FragmentQuiz3Binding.inflate(inflater, container, false)
         return binding.root
     }

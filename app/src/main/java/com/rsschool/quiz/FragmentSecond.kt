@@ -23,7 +23,8 @@ class FragmentSecond() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         (activity as MainActivity).setTheme(com.rsschool.quiz.R.style.Theme_Quiz_Second)
-        (activity as MainActivity).window.setStatusBarColor(ContextCompat.getColor(activity as MainActivity, com.rsschool.quiz.R.color.yellow_100_dark))
+        (activity as MainActivity).window.statusBarColor =
+            ContextCompat.getColor(activity as MainActivity, com.rsschool.quiz.R.color.yellow_100_dark)
         _binding = FragmentQuiz2Binding.inflate(inflater, container, false)
         return binding.root
     }
