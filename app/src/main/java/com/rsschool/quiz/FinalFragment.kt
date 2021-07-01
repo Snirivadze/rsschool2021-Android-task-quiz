@@ -74,7 +74,6 @@ class FinalFragment : Fragment() {
             val sendIntent = Intent().apply {
                 action = Intent.ACTION_SEND
                 type = "plain/text"
-                putExtra(Intent.EXTRA_EMAIL,"Test@gmail.com")
                 putExtra(Intent.EXTRA_SUBJECT,"Your results")
                 putExtra(Intent.EXTRA_TEXT, yourResults)
             }
