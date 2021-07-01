@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">Quiz</string>
+
+    <string name="que_1">To be or not to be…</string>
+    <string name="que_1_option_1">To Be</string>
+    <string name="que_1_option_2">Not to be</string>
+    <string name="que_1_option_3">I don\'t know</string>
+    <string name="que_1_option_4">It\'s not my problem</string>
+    <string name="que_1_option_5">… That is the question!</string>
+
+    <string name="que_2">The release date of Once upon time in a Hollywood is …</string>
+    <string name="que_2_option_1">24 of July, 2019</string>
+    <string name="que_2_option_2">24 of August, 2019</string>
+    <string name="que_2_option_3">24 of August, 2019</string>
+    <string name="que_2_option_4">24 of July, 2018</string>
+    <string name="que_2_option_5">25 of July, 2019</string>
+
+    <string name="que_3">The biggest animal is …</string>
+    <string name="que_3_option_1">Blue whale</string>
+    <string name="que_3_option_2">Elephant</string>
+    <string name="que_3_option_3">Cat</string>
+    <string name="que_3_option_4">Lion</string>
+    <string name="que_3_option_5">Mouse</string>
+
+    <string name="que_4">The tallest skyscraper is …</string>
+    <string name="que_4_option_1">Trump Tower, New York</string>
+    <string name="que_4_option_2">Burj Khalifa, Dubai</string>
+    <string name="que_4_option_3">Eiffel Tower, Paris</string>
+    <string name="que_4_option_4">Shanghai Tower, Shanghai</string>
+    <string name="que_4_option_5">Central PArk Tower, New York</string>
+
+    <string name="que_5">2+2 = </string>
+    <string name="que_5_option_1">4</string>
+    <string name="que_5_option_2">5</string>
+    <string name="que_5_option_3">-1</string>
+    <string name="que_5_option_4">0</string>
+    <string name="que_5_option_5">what</string>
 </resources>

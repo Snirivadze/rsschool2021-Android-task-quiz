@@ -1,20 +1,18 @@
 package com.rsschool.quiz
 
-import android.R
-import android.content.Context
+
 import android.os.Bundle
-import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.rsschool.quiz.databinding.FragmentQuiz2Binding
+import com.rsschool.quiz.databinding.FragmentQuizBinding
 
 
-class FragmentSecond() : Fragment() {
+class FragmentSecond : Fragment() {
 
-    private var _binding: FragmentQuiz2Binding? = null
+    private var _binding: FragmentQuizBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,10 +20,10 @@ class FragmentSecond() : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as MainActivity).setTheme(com.rsschool.quiz.R.style.Theme_Quiz_Second)
+        (activity as MainActivity).setTheme(R.style.Theme_Quiz_Second)
         (activity as MainActivity).window.statusBarColor =
-            ContextCompat.getColor(activity as MainActivity, com.rsschool.quiz.R.color.yellow_100_dark)
-        _binding = FragmentQuiz2Binding.inflate(inflater, container, false)
+            ContextCompat.getColor(activity as MainActivity, R.color.yellow_100_dark)
+        _binding = FragmentQuizBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,24 +31,26 @@ class FragmentSecond() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val str: Array<String> = resources.getStringArray(R.array.question_2)
 
         binding.nextButton.isEnabled = false
         binding.previousButton.isEnabled = true
-        binding.radioGroup
-        binding.question.text = "The release date of Once upon a time in a Hollywood is ..."
-        binding.optionOne.text = "24 of July, 2019"
-        binding.optionTwo.text = "25 of August, 2019"
-        binding.optionThree.text = "24 of August, 2019"
-        binding.optionFour.text = "24 of July, 2018"
-        binding.optionFive.text = "25 of July, 2019"
 
+        binding.question.text = str[0]
+        binding.optionOne.text = str[1]
+        binding.optionTwo.text = str[2]
+        binding.optionThree.text = str[3]
+        binding.optionFour.text = str[4]
+        binding.optionFive.text = str[5]
+
+        binding.toolbar.title = "Question 2"
 
         binding.radioGroup.setOnCheckedChangeListener { _, _ ->
             binding.nextButton.isEnabled = true
         }
 
         var count = arguments?.getInt(COUNT_KEY) ?: 0
-        var answers:Array<String> = arguments?.getStringArray(MASS_KEY) as Array<String>
+        val answers:Array<String> = arguments?.getStringArray(MASS_KEY) as Array<String>
 
 
         val mass = listOf(binding.optionOne, binding.optionTwo, binding.optionThree, binding.optionFour, binding.optionFive)

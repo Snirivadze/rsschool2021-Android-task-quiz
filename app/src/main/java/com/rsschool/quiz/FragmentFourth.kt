@@ -6,13 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.rsschool.quiz.databinding.FragmentQuiz2Binding
-import com.rsschool.quiz.databinding.FragmentQuiz4Binding
 import com.rsschool.quiz.databinding.FragmentQuizBinding
 
-class FragmentFourth() : Fragment() {
+class FragmentFourth : Fragment() {
 
-    private var _binding: FragmentQuiz4Binding? = null
+    private var _binding: FragmentQuizBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +19,7 @@ class FragmentFourth() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         ( activity as MainActivity).setTheme(R.style.Theme_Quiz_Fourth)
-        _binding = FragmentQuiz4Binding.inflate(inflater, container, false)
+        _binding = FragmentQuizBinding.inflate(inflater, container, false)
         (activity as MainActivity).window.statusBarColor =
             ContextCompat.getColor(activity as MainActivity, R.color.deep_purple_100_dark)
         return binding.root
@@ -30,24 +28,26 @@ class FragmentFourth() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val str = resources.getStringArray(R.array.question_4)
 
         binding.nextButton.isEnabled = false
         binding.previousButton.isEnabled = true
-        binding.radioGroup
-        binding.question.text = "The tallest skyscraper is ..."
-        binding.optionOne.text = "Trump Tower, New York"
-        binding.optionTwo.text = "Burj Khalifa, Dubai"
-        binding.optionThree.text = "Eiffel Tower, Paris"
-        binding.optionFour.text = "Central Park Tower, New York"
-        binding.optionFive.text = "Shanghai Tower, Shanghai"
+
+        binding.question.text = str[0]
+        binding.optionOne.text = str[1]
+        binding.optionTwo.text = str[2]
+        binding.optionThree.text = str[3]
+        binding.optionFour.text = str[4]
+        binding.optionFive.text = str[5]
+
+        binding.toolbar.title = "Question 4"
 
         binding.radioGroup.setOnCheckedChangeListener { _, _ ->
             binding.nextButton.isEnabled = true
         }
-        var count = arguments?.getInt(FragmentFourth.COUNT_KEY) ?: 0
+        var count = arguments?.getInt(COUNT_KEY) ?: 0
 
-        var answers:Array<String> = arguments?.getStringArray(MASS_KEY) as Array<String>
+        val answers:Array<String> = arguments?.getStringArray(MASS_KEY) as Array<String>
 
 
         val mass = listOf(binding.optionOne, binding.optionTwo, binding.optionThree, binding.optionFour, binding.optionFive)

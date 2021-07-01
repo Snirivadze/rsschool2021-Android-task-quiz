@@ -7,12 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.rsschool.quiz.databinding.FragmentFinalBinding
-import com.rsschool.quiz.databinding.FragmentQuiz2Binding
-import com.rsschool.quiz.databinding.FragmentQuiz4Binding
-import com.rsschool.quiz.databinding.FragmentQuizBinding
 import kotlin.system.exitProcess
 
-class FinalFragment() : Fragment() {
+class FinalFragment : Fragment() {
 
     private var _binding: FragmentFinalBinding? = null
     private val binding get() = _binding!!
@@ -29,7 +26,7 @@ class FinalFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val count = arguments?.getInt(COUNT_KEY)
-        var answers:Array<String> = arguments?.getStringArray(MASS_KEY) as Array<String>
+        val answers:Array<String> = arguments?.getStringArray(MASS_KEY) as Array<String>
 
         val answer1 = answers[0]
         val answer2 = answers[1]

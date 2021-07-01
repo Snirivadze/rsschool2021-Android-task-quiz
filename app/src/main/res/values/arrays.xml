@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="question_1">
+        <item>@string/que_1</item>
+        <item>@string/que_1_option_1</item>
+        <item>@string/que_1_option_2</item>
+        <item>@string/que_1_option_3</item>
+        <item>@string/que_1_option_4</item>
+        <item>@string/que_1_option_5</item>
+    </string-array>
+
+    <string-array name="question_2">
+        <item>@string/que_2</item>
+        <item>@string/que_2_option_1</item>
+        <item>@string/que_2_option_2</item>
+        <item>@string/que_2_option_3</item>
+        <item>@string/que_2_option_4</item>
+        <item>@string/que_2_option_5</item>
+    </string-array>
+
+    <string-array name="question_3">
+        <item>@string/que_3</item>
+        <item>@string/que_3_option_1</item>
+        <item>@string/que_3_option_2</item>
+        <item>@string/que_3_option_3</item>
+        <item>@string/que_3_option_4</item>
+        <item>@string/que_3_option_5</item>
+    </string-array>
+
+    <string-array name="question_4">
+        <item>@string/que_4</item>
+        <item>@string/que_4_option_1</item>
+        <item>@string/que_4_option_2</item>
+        <item>@string/que_4_option_3</item>
+        <item>@string/que_4_option_4</item>
+        <item>@string/que_4_option_5</item>
+    </string-array>
+
+    <string-array name="question_5">
+        <item>@string/que_5</item>
+        <item>@string/que_5_option_1</item>
+        <item>@string/que_5_option_2</item>
+        <item>@string/que_5_option_3</item>
+        <item>@string/que_5_option_4</item>
+        <item>@string/que_5_option_5</item>
+    </string-array>
+
+
+</resources>
